@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Zap, Trophy, Users, Star, Timer } from 'lucide-react';
+import PrizePool from '../components/PrizePool';
 
 const HomePage: React.FC = () => {
   const [timeUntilNextDraw, setTimeUntilNextDraw] = useState<string>('');
@@ -34,15 +35,19 @@ const HomePage: React.FC = () => {
         <p className="text-xl text-[#daa520]/60">Experience the thrill of live gaming</p>
       </div>
 
-      <div className="glass-panel p-6 text-center">
-        <div className="flex items-center justify-center gap-3 mb-2">
-          <Timer size={24} className="text-[#daa520]" />
-          <h2 className="text-2xl font-bold text-[#daa520] hermes-title">Live Draw</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="glass-panel p-6 text-center">
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <Timer size={24} className="text-[#daa520]" />
+            <h2 className="text-2xl font-bold text-[#daa520] hermes-title">Live Draw</h2>
+          </div>
+          <div className="text-4xl font-bold font-mono text-[#daa520] divine-shimmer">
+            {timeUntilNextDraw}
+          </div>
+          <p className="mt-2 text-[#daa520]/60">Until next draw</p>
         </div>
-        <div className="text-4xl font-bold font-mono text-[#daa520] divine-shimmer">
-          {timeUntilNextDraw}
-        </div>
-        <p className="mt-2 text-[#daa520]/60">Until next draw</p>
+
+        <PrizePool />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">

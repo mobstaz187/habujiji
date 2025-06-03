@@ -10,3 +10,11 @@ export type DrawResult = {
   timestamp: number;
   id: string;
 };
+
+export type Winner = {
+  wallet: string;
+  totalWins: string;
+  gamesWon: number;
+  timestamp: string;
+  transactionId?: string;
+};

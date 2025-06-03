@@ -1,57 +1,10 @@
 import React from 'react';
-import { Trophy, ExternalLink } from 'lucide-react';
-import { parseTime, formatTimeAgo } from '../utils/time';
-
-interface Winner {
-  wallet: string;
-  totalWins: string;
-  gamesWon: number;
-  timestamp: string;
-  transactionId?: string;
-}
+import { ExternalLink } from 'lucide-react';
+import { formatTimeAgo } from '../utils/time';
+import { blessedWinners, recentWinners } from '../config/winners';
+import type { Winner } from '../types';
 
 const WinnersPage: React.FC = () => {
-  const recentWinners: Winner[] = [
-    { 
-      wallet: "Wallet ***789", 
-      totalWins: "1,245.5 SOL", 
-      gamesWon: 12,
-      timestamp: parseTime('8:00 PM'),
-      transactionId: "4ueHzkS7YFr2DdDqVKKBJvqZGNBtF7pTSfEqP5UzXywYqQJBfh8LzRSbEGGaKZBvMHxJTGqF2hjhzMQFnLq1JVVH"
-    },
-    { 
-      wallet: "Wallet ***456", 
-      totalWins: "985.0 SOL", 
-      gamesWon: 8,
-      timestamp: parseTime('7:30 PM'),
-      transactionId: "3vGHxKS7YFr2DdDqVKKBJvqZGNBtF7pTSfEqP5UzXywYqQJBfh8LzRSbEGGaKZBvMHxJTGqF2hjhzMQFnLq1JVVH"
-    },
-    { 
-      wallet: "Wallet ***123", 
-      totalWins: "756.5 SOL", 
-      gamesWon: 6,
-      timestamp: parseTime('7:00 PM'),
-      transactionId: "2kLHxKS7YFr2DdDqVKKBJvqZGNBtF7pTSfEqP5UzXywYqQJBfh8LzRSbEGGaKZBvMHxJTGqF2hjhzMQFnLq1JVVH"
-    }
-  ];
-  
-  const blessedWinners: Winner[] = [
-    {
-      wallet: "Oracle ***321",
-      totalWins: "2,500.0 SOL",
-      gamesWon: 15,
-      timestamp: parseTime('8:30 PM'),
-      transactionId: "5xKLmNS8YFr3DdDqVKKBJvqZGNBtF7pTSfEqP5UzXywYqQJBfh8LzRSbEGGaKZBvMHxJTGqF2hjhzMQFnLq1JVVH"
-    },
-    {
-      wallet: "Prophet ***555",
-      totalWins: "3,750.0 SOL",
-      gamesWon: 20,
-      timestamp: parseTime('8:45 PM'),
-      transactionId: "6yMNpKS9ZFr4EdDqVKKBJvqZGNBtF7pTSfEqP5UzXywYqQJBfh8LzRSbEGGaKZBvMHxJTGqF2hjhzMQFnLq1JVVH"
-    }
-  ];
-
   const openSolscan = (txId: string) => {
     window.open(`https://solscan.io/tx/${txId}`, '_blank');
   };
