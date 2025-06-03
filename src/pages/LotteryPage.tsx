@@ -161,7 +161,7 @@ const LotteryPage: React.FC = () => {
     <div className="py-8 px-4 lottery-bg min-h-screen">
       <div className="container mx-auto max-w-6xl">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-3 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 bg-clip-text text-transparent pulse">
-          LiveBall
+          LiveRoll
         </h1>
         <p className="text-center text-amber-200/60 mb-8">Pick your lucky numbers and win big with Solana!</p>
         
@@ -182,4 +182,4 @@ const LotteryPage: React.FC = () => {
   );
 };
 
-export default LotteryPage
+export default LotteryPage;

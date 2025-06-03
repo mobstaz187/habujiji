@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             <Zap size={32} className="text-[#daa520]" />
             <div className="flex flex-col">
               <span className="text-2xl font-bold hermes-title bg-gradient-to-r from-[#daa520] via-[#cd7f32] to-[#daa520] bg-clip-text text-transparent">
-                LiveBall
+                LiveRoll
               </span>
               <span className="text-sm font-medium text-[#daa520]/80">$ROLL</span>
             </div>
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
                 <div className="bg-[#daa520]/10 p-6 rounded-xl">
                   <h3 className="text-xl font-semibold text-[#daa520] mb-3">Minimum Requirements</h3>
                   <p className="text-lg leading-relaxed">
-                    Hold at least 1000 $ROLL tokens to be eligible for draws.
+                    Hold at least 10000 $ROLL tokens to be eligible for draws.
                   </p>
                 </div>
               </div>
