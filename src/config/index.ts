@@ -10,18 +10,18 @@ export const config = {
 
   // Contract Configuration
   contract: {
-    address: '5xKLmNS8YFr3DdDqVKKBJvqZGNBtF7pTSfEqP5UzXywY',
+    address: '3NoNupdonBN84cGbE6KJhGasb9K5nWdUXJMy7ubbd1Me',
     minimumTokens: 10000, // Minimum tokens required for participation
   },
 
   // Social Media Links
   social: {
-    twitter: 'https://twitter.com/liveroll',
+    twitter: 'x.com',
   },
 
   // Prize Pool Configuration
   prizePool: {
-    walletAddress: 'vEe5tMLKuUXHm6zMZisBiVDMdDfpu4vrZDtrCPyXpot',
+    walletAddress: '2QhB4DpaUUk8SWwc9NGsyReEdFXy6rDm9RsxCCeyhySs',
     heliusApiKey: '75100757-d246-4d7a-a1af-697649290166',
     updateInterval: 60000, // Update interval in milliseconds (1 minute)
   },

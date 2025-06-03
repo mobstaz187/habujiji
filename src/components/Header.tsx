@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Zap, HelpCircle, Copy, Check, Coins } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { config } from '../config';
 
 const Header: React.FC = () => {
   const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [copied, setCopied] = useState(false);
-  const contractAddress = "5xKLmNS8YFr3DdDqVKKBJvqZGNBtF7pTSfEqP5UzXywY";
+  const contractAddress = config.contract.address;
 
   const copyToClipboard = async () => {
     try {
@@ -87,7 +88,7 @@ const Header: React.FC = () => {
                   <h3 className="text-xl font-semibold text-[#daa520] mb-3">1. Hold Tokens</h3>
                   <p className="text-lg leading-relaxed">
                     Simply hold $ROLL tokens in your wallet to be eligible for hourly draws. 
-                    The more tokens you hold, the higher your chances of winning!
+                    10,000 tokens = 1 entry. The more tokens you hold, the higher your chances of winning!
                   </p>
                 </div>
 
@@ -100,19 +101,18 @@ const Header: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-[#daa520] mb-3">3. Prize Distribution</h3>
+                  <h3 className="text-xl font-semibold text-[#daa520] mb-3">3. Prize Distribution (Live on Stream)</h3>
                   <ul className="list-disc pl-6 space-y-3 text-lg">
                     <li>Hourly draws with guaranteed winners</li>
                     <li>Prize pool increases with token trading volume</li>
-                    <li>Special jackpot events for major holders</li>
+                    <li>3 Winners:
+                      <ul className="list-disc pl-6 mt-2 space-y-2">
+                        <li>1st Place: 50% of prize pool</li>
+                        <li>2nd Place: 30% of prize pool</li>
+                        <li>3rd Place: 20% of prize pool</li>
+                      </ul>
+                    </li>
                   </ul>
-                </div>
-
-                <div className="bg-[#daa520]/10 p-6 rounded-xl">
-                  <h3 className="text-xl font-semibold text-[#daa520] mb-3">Minimum Requirements</h3>
-                  <p className="text-lg leading-relaxed">
-                    Hold at least 10000 $ROLL tokens to be eligible for draws.
-                  </p>
                 </div>
               </div>
 
