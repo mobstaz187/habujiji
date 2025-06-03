@@ -16,7 +16,7 @@ export const config = {
 
   // Social Media Links
   social: {
-    twitter: 'x.com',
+    twitter: 'x.com/liverollsol',
   },
 
   // Prize Pool Configuration
