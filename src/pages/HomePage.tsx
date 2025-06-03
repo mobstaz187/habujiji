@@ -66,9 +66,25 @@ const HomePage: React.FC = () => {
             <Trophy size={32} className="text-[#daa520]" />
           </div>
           <h3 className="text-2xl font-bold text-[#daa520] mb-4 hermes-title">Victory Rush</h3>
-          <p className="text-[#daa520]/60">
-            Every second counts in your journey to the top. Seize your moment!
-          </p>
+          <div className="space-y-4">
+            <p className="text-[#daa520]/60">
+              Every hour brings new winners! Three lucky holders share the prize pool:
+            </p>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-gradient-to-br from-[#daa520]/10 to-[#cd7f32]/10 p-4 rounded-xl text-center">
+                <div className="text-2xl font-bold text-[#daa520] mb-1">50%</div>
+                <div className="text-[#daa520]/60 text-sm">1st Place</div>
+              </div>
+              <div className="bg-gradient-to-br from-[#daa520]/10 to-[#cd7f32]/10 p-4 rounded-xl text-center">
+                <div className="text-2xl font-bold text-[#daa520] mb-1">30%</div>
+                <div className="text-[#daa520]/60 text-sm">2nd Place</div>
+              </div>
+              <div className="bg-gradient-to-br from-[#daa520]/10 to-[#cd7f32]/10 p-4 rounded-xl text-center">
+                <div className="text-2xl font-bold text-[#daa520] mb-1">20%</div>
+                <div className="text-[#daa520]/60 text-sm">3rd Place</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
