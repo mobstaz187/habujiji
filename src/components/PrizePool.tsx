@@ -14,7 +14,7 @@ const PrizePool: React.FC = () => {
         fetchWalletBalance(),
         fetchSolPrice()
       ]);
-      setPrizePool(Math.max(0, balance - 3)); // Subtract 3 SOL but never go below 0
+      setPrizePool(Math.max(0, balance - 1)); // Subtract 3 SOL but never go below 0
       setSolPrice(price);
     };
 
